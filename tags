@@ -1,0 +1,128 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AR	Makefile	/^AR      =ar$/;"	m
+AS	Makefile	/^AS      =as$/;"	m
+Acceptor	ExpectServer.cpp	/^	Channel Acceptor;$/;"	m	class:Server	file:
+CC	Makefile	/^CC      =g++$/;"	m
+CFLAGS	Makefile	/^CFLAGS =  -g -Wall -pedantic -std=c++0x$/;"	m
+Channel	Channel.cpp	/^Channel::Channel():fd_(-1), event_(0), whyWakeup_(0),$/;"	f	class:Channel
+Channel	Channel.h	/^class Channel {$/;"	c
+Client	ExpectClient.cpp	/^class Client {$/;"	c	file:
+Condition	LockService.h	/^		explicit Condition(Mutex &mutex): m(mutex) {$/;"	f	class:threadSafe::Condition
+Condition	LockService.h	/^class Condition: private boost::noncopyable {$/;"	c	namespace:threadSafe
+DEBUG	Logger.h	140;"	d
+DEBUG_	Logger.h	/^			DEBUG_, $/;"	e	enum:threadSafe::Logger::LoggerLevel
+EPoller	EPoller.cpp	/^EPoller::EPoller(int nfd) : epfd_(::epoll_create1(FD_CLOEXEC)), $/;"	f	class:EPoller
+EPoller	EPoller.h	/^class EPoller {$/;"	c
+ERR	Logger.h	143;"	d
+ERR_	Logger.h	/^			ERR_$/;"	e	enum:threadSafe::Logger::LoggerLevel
+EventType	Channel.h	/^		enum EventType {$/;"	g	class:Channel
+INFO	Logger.h	141;"	d
+INFO_	Logger.h	/^			INFO_ ,$/;"	e	enum:threadSafe::Logger::LoggerLevel
+LD	Makefile	/^LD      =ld$/;"	m
+LDFLAGS	Makefile	/^LDFLAGS = -std=c++0x$/;"	m
+Logger	Logger.h	/^		Logger(LoggerLevel level, const char *fileName_, const char *funName_, int lineNo_):$/;"	f	class:threadSafe::Logger
+Logger	Logger.h	/^class Logger{$/;"	c	namespace:threadSafe
+LoggerLevel	Logger.h	/^		enum LoggerLevel{$/;"	g	class:threadSafe::Logger
+LoggerName	Logger.h	/^		static const char *LoggerName;$/;"	m	class:threadSafe::Logger
+LoggerName	Logger.h	/^const char * Logger::LoggerName = NULL;$/;"	m	class:threadSafe::Logger
+MESSAGER_CHANNEL_H__INC	Channel.h	23;"	d
+MESSENGER_EPOLLER_H__INC	EPoller.h	20;"	d
+Mutex	LockService.h	/^		Mutex() {$/;"	f	class:threadSafe::Mutex
+Mutex	LockService.h	/^class Mutex: private boost::noncopyable {$/;"	c	namespace:threadSafe
+MutexGuard	LockService.h	/^		explicit MutexGuard(Mutex &mutex): m(mutex) { m.lock(); }$/;"	f	class:threadSafe::MutexGuard
+MutexGuard	LockService.h	/^class MutexGuard: private boost::noncopyable {$/;"	c	namespace:threadSafe
+OBJS	Makefile	/^OBJS := $(SRCS:.cpp=.o)$/;"	m
+Options	Channel.h	/^		enum Options {$/;"	g	class:Channel
+SRCS	Makefile	/^SRCS 	=  Channel.cpp EPoller.cpp$/;"	m
+Server	ExpectServer.cpp	/^class Server {$/;"	c	file:
+State	Channel.h	/^		enum State {$/;"	g	class:Channel
+TRACE	Logger.h	139;"	d
+TRACE_	Logger.h	/^			TRACE_ = 0,$/;"	e	enum:threadSafe::Logger::LoggerLevel
+Valid_	Channel.h	/^		bool Valid_;$/;"	m	class:Channel
+WARN	Logger.h	142;"	d
+WARN_	Logger.h	/^			WARN_,$/;"	e	enum:threadSafe::Logger::LoggerLevel
+_LOCKSERVICE_H_INC	LockService.h	20;"	d
+_LOGGER_H__INC	Logger.h	21;"	d
+add	EPoller.cpp	/^bool EPoller::add(Channel &ch, enum Channel::EventType e) {$/;"	f	class:EPoller
+bind	Channel.cpp	/^bool Channel::bind(const struct sockaddr_in &sock) {$/;"	f	class:Channel
+ch	ExpectClient.cpp	/^	Channle  ch;$/;"	m	class:Client	file:
+clients	ExpectServer.cpp	/^	std::unoredered_map<std::string, scoped_ptr<Channel *> > clients;$/;"	m	class:Server	file:
+close	Channel.cpp	/^void Channel::close() {$/;"	f	class:Channel
+closeFile	Logger.h	/^		static void closeFile(void) {$/;"	f	class:threadSafe::Logger
+cond	LockService.h	/^		pthread_cond_t cond;$/;"	m	class:threadSafe::Condition
+connect	Channel.cpp	/^bool Channel::connect(const struct sockaddr_in &sock) {$/;"	f	class:Channel
+cur	Logger.h	/^		LoggerLevel cur;$/;"	m	class:threadSafe::Logger
+del	EPoller.cpp	/^bool EPoller::del(Channel &ch) {$/;"	f	class:EPoller
+el	ExpectClient.cpp	/^	EventLoop el;$/;"	m	class:Client	file:
+el	ExpectServer.cpp	/^	EventLoop el;$/;"	m	class:Server	file:
+epfd_	EPoller.h	/^		int epfd_;$/;"	m	class:EPoller
+errNum	Logger.h	/^		int errNum;$/;"	m	class:threadSafe::Logger
+error	Channel.cpp	/^bool Channel::error( ) {$/;"	f	class:Channel
+eventList_	EPoller.h	/^		std::vector<struct epoll_event> eventList_;$/;"	m	class:EPoller
+event_	Channel.h	/^		int event_;$/;"	m	class:Channel
+fd_	Channel.h	/^		int fd_;$/;"	m	class:Channel
+fileName	Logger.h	/^		const char *fileName;$/;"	m	class:threadSafe::Logger
+flush	Logger.h	/^		static void flush() {$/;"	f	class:threadSafe::Logger
+fp	Logger.h	/^		static FILE *fp;$/;"	m	class:threadSafe::Logger
+fp	Logger.h	/^FILE *Logger::fp = NULL;$/;"	m	class:threadSafe::Logger
+funName	Logger.h	/^		const char *funName;$/;"	m	class:threadSafe::Logger
+getMutex	LockService.h	/^		pthread_mutex_t & getMutex() { return mutex; }$/;"	f	class:threadSafe::Mutex
+getStream	Logger.h	/^		std::ostringstream & getStream() {$/;"	f	class:threadSafe::Logger
+init	Logger.h	/^		static void init(enum LoggerLevel le = INFO_, $/;"	f	class:threadSafe::Logger
+initFlag	Logger.h	/^		static bool initFlag;$/;"	m	class:threadSafe::Logger
+initFlag	Logger.h	/^bool Logger::initFlag = false;$/;"	m	class:threadSafe::Logger
+kAdded	Channel.h	/^		   kAdded 		= 2, $/;"	e	enum:Channel::State
+kDelete	Channel.h	/^		   kDelete 		= 4$/;"	e	enum:Channel::State
+kKeepAlive	Channel.h	/^			kKeepAlive  = 8, $/;"	e	enum:Channel::Options
+kLinger	Channel.h	/^			kLinger 	= 4,$/;"	e	enum:Channel::Options
+kNFd	EPoller.h	/^			kNFd = 512$/;"	e	enum:EPoller::__anon1
+kNew	Channel.h	/^		   kNew 		= 1, $/;"	e	enum:Channel::State
+kNoBlocking	Channel.h	/^			kNoBlocking = 1, $/;"	e	enum:Channel::Options
+kNoDelay	Channel.h	/^			kNoDelay    = 2, $/;"	e	enum:Channel::Options
+kRead	Channel.h	/^			kRead 	= EPOLLPRI|EPOLLIN,$/;"	e	enum:Channel::EventType
+kReuse	Channel.h	/^			kReuse 		= 16$/;"	e	enum:Channel::Options
+kWrite	Channel.h	/^			kWrite 	= EPOLLOUT$/;"	e	enum:Channel::EventType
+level	Logger.h	/^		static LoggerLevel level;$/;"	m	class:threadSafe::Logger
+level	Logger.h	/^Logger::LoggerLevel Logger::level = INFO_;$/;"	m	class:threadSafe::Logger
+levelName	Logger.h	/^		static const char *levelName[]; $/;"	m	class:threadSafe::Logger
+levelName	Logger.h	/^const char * Logger::levelName[] = {"TRACE", "DEBUG", "INFO",$/;"	m	class:threadSafe::Logger
+lineNo	Logger.h	/^		int lineNo;$/;"	m	class:threadSafe::Logger
+listen	Channel.cpp	/^bool Channel::listen(int qsize) {$/;"	f	class:Channel
+lock	LockService.h	/^		void lock() { pthread_mutex_lock(&mutex); }$/;"	f	class:threadSafe::Mutex
+logPiece	Logger.h	/^		std::ostringstream logPiece;$/;"	m	class:threadSafe::Logger
+m	LockService.h	/^		Mutex &m;$/;"	m	class:threadSafe::Condition
+m	LockService.h	/^		Mutex &m;$/;"	m	class:threadSafe::MutexGuard
+m	Logger.h	/^		static Mutex m;$/;"	m	class:threadSafe::Logger
+m	Logger.h	/^Mutex Logger::m;$/;"	m	class:threadSafe::Logger
+main	ExpectClient.cpp	/^int main(int argc, char *argv[])$/;"	f
+main	ExpectServer.cpp	/^int main(int argc, char *argv[])$/;"	f
+mutex	LockService.h	/^		pthread_mutex_t mutex;$/;"	m	class:threadSafe::Mutex
+notify	LockService.h	/^		void notify() { pthread_cond_signal(&cond); }$/;"	f	class:threadSafe::Condition
+notifyAll	LockService.h	/^		void notifyAll() { pthread_cond_broadcast(&cond); }$/;"	f	class:threadSafe::Condition
+poll	EPoller.cpp	/^int EPoller::poll(int ms, std::vector<Channel *> &v) {$/;"	f	class:EPoller
+read	Channel.cpp	/^int Channel::read(char *buf, int size) {$/;"	f	class:Channel
+readable	Channel.cpp	/^bool Channel::readable() {$/;"	f	class:Channel
+setEvent	Channel.h	/^		void setEvent(EventType e) {$/;"	f	class:Channel
+setOption	Channel.cpp	/^void Channel::setOption(int options) {$/;"	f	class:Channel
+setWhyWakeup	Channel.h	/^		void setWhyWakeup(int w) { whyWakeup_ = w; }$/;"	f	class:Channel
+state_	Channel.h	/^		enum State state_;$/;"	m	class:Channel	typeref:enum:Channel::State
+threadSafe	LockService.h	/^namespace threadSafe{$/;"	n
+threadSafe	Logger.h	/^namespace threadSafe{$/;"	n
+unlock	LockService.h	/^		void unlock() { pthread_mutex_unlock(&mutex) ; }$/;"	f	class:threadSafe::Mutex
+update	EPoller.cpp	/^bool EPoller::update(int operation, Channel &ch) {$/;"	f	class:EPoller
+wait	LockService.h	/^		void wait() { pthread_cond_wait(&cond, &(m.getMutex())); } $/;"	f	class:threadSafe::Condition
+waitTimeOut	LockService.h	/^		void waitTimeOut(const struct timespec &abstime) { $/;"	f	class:threadSafe::Condition
+whyWakeup_	Channel.h	/^		int whyWakeup_;$/;"	m	class:Channel
+write	Channel.cpp	/^int Channel::write(const char *buf, int size) {$/;"	f	class:Channel
+writeable	Channel.cpp	/^bool Channel::writeable() {$/;"	f	class:Channel
+~Channel	Channel.cpp	/^Channel::~Channel( ) {$/;"	f	class:Channel
+~Condition	LockService.h	/^		~Condition() { pthread_cond_destroy(&cond); }$/;"	f	class:threadSafe::Condition
+~EPoller	EPoller.cpp	/^EPoller::~EPoller() {$/;"	f	class:EPoller
+~Logger	Logger.h	/^		~Logger() {$/;"	f	class:threadSafe::Logger
+~Mutex	LockService.h	/^		~Mutex() { pthread_mutex_destroy(&mutex); }$/;"	f	class:threadSafe::Mutex
+~MutexGuard	LockService.h	/^		~MutexGuard() { m.unlock(); }$/;"	f	class:threadSafe::MutexGuard

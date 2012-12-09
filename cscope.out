@@ -1,0 +1,2152 @@
+cscope 15 $HOME/utils/Messager -q 0000000231 0000009758
+	@Channel.cpp
+
+19 
+	~"ChªÃl.h
+"
+
+20 
+	~<sys/ty³s.h
+>
+
+21 
+	~<sys/sock‘.h
+>
+
+22 
+	~<uni¡d.h
+>
+
+23 
+	~<¬·/š‘.h
+>
+
+25 
+	gChªÃl
+::
+	$ChªÃl
+():
+	`fd_
+(-1), 
+	`ev’t_
+(0), 
+	`whyWakeup_
+(0),
+
+26 
+	`¡©e_
+(
+kNew
+), 
+	$V®id_
+(
+çl£
+) {
+
+27 
+fd_
+ = 
+	`sock‘
+(
+AF_INET
+,
+SOCK_STREAM
+
+
+28 | 
+SOCK_CLOEXEC
+, 
+IPPROTO_TCP
+);
+
+29 
+V®id_
+ = (
+fd_
+ > 0);
+
+30 
+	}
+}
+
+32 
+	gChªÃl
+::~
+	$ChªÃl
+( ) {
+
+33 
+	`şo£
+();
+
+34 
+	}
+}
+
+36 
+	gChªÃl
+::
+	$şo£
+() {
+
+37 ifĞ
+V®id_
+ )
+
+39 ::
+	`şo£
+(
+fd_
+);
+
+40 
+V®id_
+ = 
+çl£
+;
+
+42 
+	}
+}
+
+44 
+	gChªÃl
+::
+	$»ad
+(*
+buf
+, 
+size
+) {
+
+45  ::
+	`»ad
+(
+fd_
+, 
+buf
+, 
+size
+);
+
+46 
+	}
+}
+
+48 
+	gChªÃl
+::
+	$wr™e
+(cÚ¡ *
+buf
+, 
+size
+) {
+
+49  ::
+	`wr™e
+(
+fd_
+, 
+buf
+, 
+size
+);
+
+50 
+	}
+}
+
+51 
+boŞ
+ 
+	gChªÃl
+::
+	$cÚÃù
+(cÚ¡ 
+sockaddr_š
+ &
+sock
+) {
+
+52  ::
+	`cÚÃù
+(
+fd_
+, (
+sockaddr
+*)&
+sock
+, (sock)) == 0 ;
+
+53 
+	}
+}
+
+54 
+boŞ
+ 
+	gChªÃl
+::
+	$li¡’
+(
+qsize
+) {
+
+55  ::
+	`li¡’
+(
+fd_
+, 
+qsize
+) == 0;
+
+56 
+	}
+}
+
+58 
+boŞ
+ 
+	gChªÃl
+::
+	$»adabË
+() {
+
+59  
+whyWakeup_
+ & (
+EPOLLPRI
+ | 
+EPOLLIN
+);
+
+60 
+	}
+}
+
+61 
+boŞ
+ 
+	gChªÃl
+::
+	$wr™—bË
+() {
+
+62  
+whyWakeup_
+ & 
+EPOLLOUT
+;
+
+63 
+	}
+}
+
+64 
+boŞ
+ 
+	gChªÃl
+::
+	$”rÜ
+( ) {
+
+65  !
+	`»adabË
+(è&& !
+	`wr™—bË
+() ;
+
+66 
+	}
+}
+
+68 
+boŞ
+ 
+	gChªÃl
+::
+	$bšd
+(cÚ¡ 
+sockaddr_š
+ &
+sock
+) {
+
+69  ::
+	`bšd
+(
+fd_
+, (cÚ¡ 
+sockaddr
+*)
+sock
+,
+
+70 (
+sock
+)) == 0;
+
+71 
+	}
+}
+
+73 
+	gChªÃl
+::
+	$£tO±iÚ
+(
+İtiÚs
+) {
+
+74 if(
+İtiÚs
+ & 
+kNoBlockšg
+ != 0)
+
+75 
+	`fú
+(
+
+76 
+	}
+}
+
+	@Channel.h
+
+22 #iâdeà 
+MESSAGER_CHANNEL_H__INC
+
+
+23 
+	#MESSAGER_CHANNEL_H__INC
+
+
+	)
+
+24 
+	~<¡ršg
+>
+
+25 
+	~<sys/•Şl.h
+>
+
+26 şas 
+	cChªÃl
+ {
+
+27 
+	mpublic
+:
+
+28 
+ä›nd
+ 
+şass
+ 
+EPŞËr
+;
+
+29 
+	eO±iÚs
+ {
+
+30 
+	mkNoBlockšg
+ = 1,
+
+31 
+	mkNoD–ay
+ = 2,
+
+32 
+	mkLšg”
+ = 4,
+
+33 
+	mkK“pAlive
+ = 8,
+
+34 
+	mkReu£
+ = 16
+
+36 
+	eS‹
+ {
+
+37 
+	gkNew
+ = 1,
+
+38 
+	gkAdded
+ = 2,
+
+39 
+	gkD–‘e
+ = 4
+
+41 
+	eEv’tTy³
+ {
+
+42 
+	gkR—d
+ = 
+EPOLLPRI
+|
+EPOLLIN
+,
+
+43 
+	gkWr™e
+ = 
+EPOLLOUT
+
+
+45 
+ChªÃl
+( );
+
+46 ~
+ChªÃl
+( );
+
+47 
+»ad
+(*
+buf
+, 
+size
+);
+
+48 
+wr™e
+(cÚ¡ *
+buf
+, 
+size
+);
+
+49 
+boŞ
+ 
+cÚÃù
+(cÚ¡ 
+sockaddr_š
+ &);
+
+50 
+ChªÃl
+ * 
+acû±
+();
+
+51 
+boŞ
+ 
+bšd
+(cÚ¡ 
+sockaddr_š
+ &);
+
+52 
+boŞ
+ 
+li¡’
+(
+qsize
+);
+
+53 
+boŞ
+ 
+£tO±iÚ
+(
+İtiÚs
+);
+
+54 
+şo£
+();
+
+55 
+boŞ
+ 
+V®id
+();
+
+56 
+boŞ
+ 
+»adabË
+();
+
+57 
+boŞ
+ 
+wr™—bË
+();
+
+58 
+boŞ
+ 
+”rÜ
+();
+
+59 
+	g´iv©e
+:
+
+61 
+ChªÃl
+(const Channel&);
+
+62 
+	gChªÃl
+ & 
+	gİ”©Ü
+=(cÚ¡ 
+ChªÃl
+&);
+
+64 
+	$£tEv’t
+(
+Ev’tTy³
+ 
+e
+) {
+
+65 
+ev’t_
+ |ğ
+e
+;
+
+66 
+	}
+}
+
+68 
+	$£tWhyWakeup
+(
+w
+è{ 
+whyWakeup_
+ = w; 
+	}
+}
+
+69 
+	gfd_
+;
+
+70 
+	gev’t_
+;
+
+71 
+	gwhyWakeup_
+;
+
+72 
+S‹
+ 
+	g¡©e_
+;
+
+73 
+boŞ
+ 
+	gV®id_
+;
+
+	@EPoller.cpp
+
+18 
+	~<uni¡d.h
+>
+
+19 
+	~<fú.h
+>
+
+20 
+	~"EPŞËr.h
+"
+
+21 
+	~<sys/•Şl.h
+>
+
+22 
+	~"Logg”.h
+"
+
+23 
+usšg
+ 
+Çme¥aû
+ 
+	gth»adSaã
+;
+
+24 
+	gEPŞËr
+::
+	$EPŞËr
+(
+nfd
+è: 
+	`•fd_
+(::
+	`•Şl_ü—‹1
+(
+FD_CLOEXEC
+)),
+
+25 
+	$ev’tLi¡_
+(
+kNFd
+) {
+
+26 if(
+•fd_
+ < 0) {
+
+27 
+ERR
+ << "createƒpoll fd failed\n";
+
+28 
+	`ex™
+(0);
+
+30 
+	}
+}
+
+32 
+	gEPŞËr
+::~
+	$EPŞËr
+() {
+
+33 ::
+	`şo£
+(
+•fd_
+);
+
+34 
+	}
+}
+
+36 
+	gEPŞËr
+::
+pŞl
+(
+ms
+, 
+¡d
+::
+veùÜ
+<
+ChªÃl
+ *> &
+v
+) {
+
+37 
+nEv’t
+ = ::
+•Şl_wa™
+(
+•fd_
+, &
+ev’tLi¡_
+[0],
+
+38 
+ev’tLi¡_
+.
+size
+(), 
+ms
+);
+
+39 ifĞ
+	gnEv’t
+ <= 0 )
+
+42  
+	gi
+ = 0 ; i < 
+	gnEv’t
+ ; i++ )
+
+44 
+ChªÃl
+ *
+	gch
+ = 
+¡©ic_ÿ¡
+<ChªÃl*>(
+ev’tLi¡_
+[
+i
+].
+d©a
+.
+±r
+);
+
+45 
+	gch
+->
+£tWhyWakeup
+(
+ev’tLi¡_
+[
+i
+].
+ev’ts
+);
+
+46 
+	gv
+.
+push_back
+(
+ch
+);
+
+49 ifĞ
+	g¡©ic_ÿ¡
+<>(
+	gnEv’t
+è=ğ
+ev’tLi¡_
+.
+size
+() )
+
+50 
+ev’tLi¡_
+.
+»size
+Ğ2 * 
+nEv’t
+ );
+
+51  
+	gnEv’t
+;
+
+54 
+boŞ
+ 
+	gEPŞËr
+::
+	$upd©e
+(
+İ”©iÚ
+, 
+ChªÃl
+ &
+ch
+) {
+
+55 
+•Şl_ev’t
+ 
+ev’t
+;
+
+57 
+	`bz”o
+(&
+ev’t
+, (event));
+
+58 
+ev’t
+.
+ev’ts
+ = 
+ch
+.
+ev’t_
+;
+
+59 
+ev’t
+.
+d©a
+.
+±r
+ = &
+ch
+;
+
+61 
+fd
+ = 
+ch
+.
+fd_
+;
+
+62 ifĞ::
+	`•Şl_ùl
+(
+•fd_
+, 
+İ”©iÚ
+, 
+fd
+, &
+ev’t
+ ) < 0)
+
+64 ifĞ
+İ”©iÚ
+ =ğ
+EPOLL_CTL_DEL
+)
+
+66 
+ERR
+ << "epoll could‚ot delete\n";
+
+68 
+ERR
+ << "could‚ot updateƒvent\n";
+
+71  
+çl£
+;
+
+73  
+Œue
+;
+
+74 
+	}
+}
+
+75 
+boŞ
+ 
+	gEPŞËr
+::
+add
+(
+ChªÃl
+ &
+ch
+, ChªÃl::
+Ev’tTy³
+ 
+e
+) {
+
+76 
+İ”©iÚ
+;
+
+77 if(
+	gch
+.
+	g¡©e_
+ =ğ
+ChªÃl
+::
+kNew
+ || 
+ch
+.
+¡©e_
+ =ğChªÃl::
+kD–‘e
+) {
+
+78 
+İ”©iÚ
+ = 
+EPOLL_CTL_ADD
+;
+
+80 
+	gİ”©iÚ
+ = 
+EPOLL_CTL_MOD
+;
+
+82 
+	gch
+.
+£tEv’t
+(
+e
+);
+
+83 
+	gch
+.
+	g¡©e_
+ = 
+ChªÃl
+::
+kAdded
+;
+
+84  
+upd©e
+(
+İ”©iÚ
+, 
+ch
+);
+
+87 
+boŞ
+ 
+	gEPŞËr
+::
+	$d–
+(
+ChªÃl
+ &
+ch
+) {
+
+88 
+ch
+.
+¡©e_
+ = 
+ChªÃl
+::
+kD–‘e
+;
+
+89 
+ch
+.
+ev’t_
+ = 0;
+
+90  
+	`upd©e
+(
+EPOLL_CTL_DEL
+, 
+ch
+);
+
+91 
+	}
+}
+
+	@EPoller.h
+
+19 #iâdeà 
+MESSENGER_EPOLLER_H__INC
+
+
+20 
+	#MESSENGER_EPOLLER_H__INC
+
+
+	)
+
+21 
+	~"ChªÃl.h
+"
+
+22 
+	~<veùÜ
+>
+
+23 
+	~<sys/•Şl.h
+>
+
+24 şas 
+	cEPŞËr
+ {
+
+25 
+	mpublic
+:
+
+27 
+kNFd
+ = 512
+
+30 
+EPŞËr
+(
+nfd
+ = 
+kNFd
+);
+
+31 ~
+EPŞËr
+();
+
+32 
+pŞl
+(
+ms
+, 
+¡d
+::
+veùÜ
+<
+ChªÃl
+ *> &
+v
+);
+
+33 
+boŞ
+ 
+add
+(
+ChªÃl
+ &, ChªÃl::
+Ev’tTy³
+);
+
+34 
+boŞ
+ 
+d–
+(
+ChªÃl
+ &);
+
+35 
+	g´iv©e
+:
+
+37 
+EPŞËr
+(const EPoller &);
+
+38 
+	gEPŞËr
+ & 
+	gİ”©Ü
+=(cÚ¡ 
+EPŞËr
+ &);
+
+39 
+boŞ
+ 
+upd©e
+(
+İ”©iÚ
+, 
+ChªÃl
+ &
+ch
+);
+
+40 
+	g•fd_
+;
+
+41 
+	g¡d
+::
+veùÜ
+<
+•Şl_ev’t
+> 
+ev’tLi¡_
+;
+
+	@EventLoop.h
+
+	@ExpectClient.cpp
+
+19 şas 
+	cCl›Á
+ {
+
+20 
+Ev’tLoİ
+ 
+	m–
+;
+
+21 
+ChªÆe
+ 
+	mch
+;
+
+22 
+cÚÃù
+(cÚ¡ 
+¡d
+::
+¡ršg
+ &
+£
+, 
+pÜt
+);
+
+23 
+ÚR—d
+(
+chªÆe
+ &
+ch
+, *
+¬g
+);
+
+24 
+ÚWr™e
+(
+chªÆe
+ &
+ch
+, *
+¬g
+);
+
+27 
+	$maš
+(
+¬gc
+, *
+¬gv
+[])
+
+29 
+Cl›Á
+ 
+c
+;
+
+30 
+c
+.
+	`cÚÃù
+();
+
+31 
+ş›Á
+.
+	`loİ
+();
+
+32 
+	}
+}
+
+	@ExpectServer.cpp
+
+18 şas 
+	cS”v”
+ {
+
+19 
+ChªÃl
+ 
+	mAcû±Ü
+;
+
+20 
+Ev’tLoİ
+ 
+	m–
+;
+
+21 
+	m¡d
+::
+unÜed”ed_m­
+<
+¡d
+::
+¡ršg
+, 
+	mscİed_±r
+<
+	mChªÃl
+ *> > 
+	mş›Ás
+;
+
+24 
+S”v”
+(cÚ¡ 
+¡d
+::
+¡ršg
+ &
+¡r
+, 
+pÜt
+);
+
+25 
+ÚAcû±
+(
+ChªÃl
+ *
+ch
+);
+
+26 
+ÚR—d
+(
+ChªÃl
+ *
+ch
+, *
+¬g
+);
+
+27 
+ÚWr™e
+(
+ChªÃl
+ *
+ch
+, *
+¬g
+);
+
+28 
+loİ
+();
+
+31 
+	$maš
+(
+¬gc
+, *
+¬gv
+[])
+
+33 
+S”v”
+ 
+£rv”
+;
+
+34 
+£rv”
+.
+	`loİ
+();
+
+35 
+	}
+}
+
+	@LockService.h
+
+19 #iâdeà 
+_LOCKSERVICE_H_INC
+
+
+20 
+	#_LOCKSERVICE_H_INC
+
+
+	)
+
+22 
+	~<±h»ad.h
+>
+
+23 
+	~<time.h
+>
+
+24 
+	~<boo¡/ut™y.hµ
+>
+
+26 
+Çme¥aû
+ 
+	gth»adSaã
+{
+
+28 şas 
+	cMu‹x
+: 
+´iv©e
+ 
+boo¡
+::
+nÚcİyabË
+ {
+
+29 
+´iv©e
+:
+
+30 
+±h»ad_mu‹x_t
+ 
+mu‹x
+;
+
+31 
+	gpublic
+:
+
+32 
+Mu‹x
+() {
+
+33 
+±h»ad_mu‹x_š™
+(&
+mu‹x
+, 
+NULL
+);
+
+35 ~
+Mu‹x
+(è{ 
+±h»ad_mu‹x_de¡roy
+(&
+mu‹x
+); }
+
+37 
+lock
+(è{ 
+±h»ad_mu‹x_lock
+(&
+mu‹x
+); }
+
+39 
+uÆock
+(è{ 
+±h»ad_mu‹x_uÆock
+(&
+mu‹x
+) ; }
+
+40 
+	g±h»ad_mu‹x_t
+ & 
+g‘Mu‹x
+(è{  
+	gmu‹x
+; }
+
+43 şas 
+	cCÚd™iÚ
+: 
+´iv©e
+ 
+boo¡
+::
+nÚcİyabË
+ {
+
+44 
+´iv©e
+:
+
+45 
+Mu‹x
+ &
+m
+;
+
+46 
+±h»ad_cÚd_t
+ 
+	gcÚd
+;
+
+47 
+	gpublic
+:
+
+48 
+ex¶ic™
+ 
+CÚd™iÚ
+(
+Mu‹x
+ &
+mu‹x
+): 
+m
+(mutex) {
+
+49 
+±h»ad_cÚd_š™
+(&
+cÚd
+, 
+NULL
+);
+
+51 ~
+CÚd™iÚ
+(è{ 
+±h»ad_cÚd_de¡roy
+(&
+cÚd
+); }
+
+53 
+wa™
+(è{ 
+±h»ad_cÚd_wa™
+(&
+cÚd
+, &(
+m
+.
+g‘Mu‹x
+())); }
+
+54 
+wa™TimeOut
+(cÚ¡ 
+time¥ec
+ &
+ab¡ime
+) {
+
+55 
+±h»ad_cÚd_timedwa™
+(&
+cÚd
+, &(
+m
+.
+g‘Mu‹x
+()), &
+ab¡ime
+);
+
+58 
+nÙify
+(è{ 
+±h»ad_cÚd_sigÇl
+(&
+cÚd
+); }
+
+59 
+nÙifyAÎ
+(è{ 
+±h»ad_cÚd_brßdÿ¡
+(&
+cÚd
+); }
+
+63 şas 
+	cMu‹xGu¬d
+: 
+´iv©e
+ 
+boo¡
+::
+nÚcİyabË
+ {
+
+64 
+´iv©e
+:
+
+65 
+Mu‹x
+ &
+m
+;
+
+66 
+	gpublic
+:
+
+67 
+ex¶ic™
+ 
+Mu‹xGu¬d
+(
+Mu‹x
+ &
+mu‹x
+): 
+m
+(mu‹xè{ m.
+lock
+(); }
+
+68 ~
+Mu‹xGu¬d
+(è{ 
+	gm
+.
+uÆock
+(); }
+
+	@Logger.h
+
+20 #iâdeà 
+_LOGGER_H__INC
+
+
+21 
+	#_LOGGER_H__INC
+
+
+	)
+
+23 
+	~"LockS”viû.h
+"
+
+24 
+	~<¡dio.h
+>
+
+25 
+	~<¡dlib.h
+>
+
+26 
+	~<time.h
+>
+
+27 
+	~<¡ršg.h
+>
+
+28 
+	~<s¡»am
+>
+
+29 
+	~<”ºo.h
+>
+
+30 
+Çme¥aû
+ 
+	gth»adSaã
+{
+
+31 şas 
+	cLogg”
+{
+
+32 
+	gpublic
+:
+
+33 
+	eLogg”Lev–
+{
+
+34 
+TRACE_
+ = 0,
+
+35 
+	gDEBUG_
+,
+
+36 
+	gINFO_
+ ,
+
+37 
+	gWARN_
+,
+
+38 
+	gERR_
+
+
+41 
+š™
+(
+Logg”Lev–
+ 
+Ë
+ = 
+INFO_
+,
+
+42 cÚ¡ *
+Çme
+ = 
+NULL
+) {
+
+43 
+Mu‹xGu¬d
+ 
+mg
+(
+m
+);
+
+45 if(
+	gš™FÏg
+)
+
+47 
+	gš™FÏg
+ = 
+Œue
+;
+
+48 
+	gLogg”Name
+ = 
+Çme
+;
+
+49 
+	gËv–
+ = 
+Ë
+;
+
+50 if(
+	gLogg”Name
+ !ğ
+NULL
+) {
+
+51 
+å
+ = 
+fİ’
+(
+Logg”Name
+, "a+");
+
+52 if(
+	gå
+ =ğ
+NULL
+) {
+
+53 
+årštf
+(
+¡d”r
+, "cannot create†ogger file\n");
+
+54 ::
+ex™
+(0);
+
+56 ::
+©ex™
+(
+şo£Fe
+);
+
+58 
+	gå
+ = 
+¡dout
+;
+
+62 
+æush
+() {
+
+63 if(
+	gå
+ !ğ
+NULL
+)
+
+64 
+fæush
+(
+å
+);
+
+67 
+Logg”
+(
+Logg”Lev–
+ 
+Ëv–
+, cÚ¡ *
+feName_
+, cÚ¡ *
+funName_
+, 
+lšeNo_
+):
+
+68 
+cur
+(
+Ëv–
+), 
+feName
+(
+feName_
+), 
+funName
+(
+funName_
+), 
+lšeNo
+(
+lšeNo_
+), 
+”rNum
+(
+”ºo
+) {
+
+69 
+	gtbuf
+[30];
+
+70 
+tm
+ 
+	gti
+;
+
+71 
+time_t
+ 
+	gt
+;
+
+73 
+time
+(&
+t
+);
+
+74 
+loÿÉime_r
+(&
+t
+, &
+ti
+);
+
+75 
+¡ráime
+(
+tbuf
+, Ñbuf), "%x %X ", &
+ti
+);
+
+76 
+	glogP›û
+ << 
+	gtbuf
+;
+
+80 
+	glogP›û
+ << "(" << 
+	gËv–Name
+[
+cur
+] << ") ";
+
+81 if(
+	gfeName
+ !ğ
+NULL
+)
+
+82 
+logP›û
+ << 
+feName
+ << " ";
+
+83 if(
+	gfunName
+ !ğ
+NULL
+)
+
+84 
+logP›û
+ << 
+funName
+ << " ";
+
+85 
+	glogP›û
+ << 
+	glšeNo
+ << " ";
+
+90 if(
+	g”rNum
+ != 0) {
+
+91 
+buf
+[100];
+
+92 
+¡»¼Ü_r
+(
+”rNum
+, 
+buf
+, (buf));
+
+93 
+	glogP›û
+ << 
+	gbuf
+ << " ";
+
+97 ~
+Logg”
+() {
+
+98 if(
+	gcur
+ >ğ
+Ëv–
+) {
+
+99 
+årštf
+(
+å
+, "%s", 
+logP›û
+.
+¡r
+().
+c_¡r
+());
+
+103 
+	g¡d
+::
+o¡ršg¡»am
+ & 
+g‘SŒ—m
+() {
+
+104  
+logP›û
+;
+
+107 
+	g´iv©e
+:
+
+108 
+¡d
+::
+o¡ršg¡»am
+ 
+logP›û
+;
+
+109 
+Logg”Lev–
+ 
+	gcur
+;
+
+110 cÚ¡ *
+	gfeName
+;
+
+111 cÚ¡ *
+	gfunName
+;
+
+112 
+	glšeNo
+;
+
+113 
+	g”rNum
+;
+
+117 
+	g´iv©e
+:
+
+118 
+şo£Fe
+() {
+
+119 if(
+Logg”Name
+ !ğ
+NULL
+)
+
+120 
+fşo£
+(
+å
+);
+
+123 
+	g´iv©e
+:
+
+124 
+Mu‹x
+ 
+m
+;
+
+125 
+boŞ
+ 
+	gš™FÏg
+;
+
+126 cÚ¡ *
+	gLogg”Name
+;
+
+127 
+Logg”Lev–
+ 
+	gËv–
+;
+
+128 
+FILE
+ *
+	gå
+;
+
+129 cÚ¡ *
+	gËv–Name
+[];
+
+132 
+Mu‹x
+ 
+	gLogg”
+::
+m
+;
+
+133 
+boŞ
+ 
+	gLogg”
+::
+š™FÏg
+ = 
+çl£
+;
+
+134 cÚ¡ * 
+	gLogg”
+::
+Logg”Name
+ = 
+NULL
+;
+
+135 
+	gLogg”
+::
+Logg”Lev–
+ 
+Logg”
+::
+Ëv–
+ = 
+INFO_
+;
+
+136 
+FILE
+ *
+	gLogg”
+::
+å
+ = 
+NULL
+;
+
+137 cÚ¡ * 
+	gLogg”
+::
+Ëv–Name
+[] = {"TRACE", "DEBUG", "INFO",
+
+139 
+	#TRACE
+ 
+th»adSaã
+::
+	`Logg”
+(
+Logg”
+::
+Logg”Lev–
+::
+TRACE_
+, 
+__FILE__
+, 
+__func__
+, 
+__LINE__
+).
+	$g‘SŒ—m
+()
+
+	)
+
+140 
+	#DEBUG
+ 
+th»adSaã
+::
+	`Logg”
+(
+Logg”
+::
+Logg”Lev–
+::
+DEBUG_
+, 
+__FILE__
+, 
+__func__
+, 
+__LINE__
+).
+	$g‘SŒ—m
+()
+
+	)
+
+141 
+	#INFO
+ 
+th»adSaã
+::
+	`Logg”
+(
+Logg”
+::
+Logg”Lev–
+::
+INFO_
+, 
+__FILE__
+, 
+__func__
+, 
+__LINE__
+).
+	$g‘SŒ—m
+()
+
+	)
+
+142 
+	#WARN
+ 
+th»adSaã
+::
+	`Logg”
+(
+Logg”
+::
+Logg”Lev–
+::
+WARN_
+, 
+__FILE__
+, 
+__func__
+, 
+__LINE__
+).
+	$g‘SŒ—m
+()
+
+	)
+
+143 
+	#ERR
+ 
+th»adSaã
+::
+	`Logg”
+(
+Logg”
+::
+Logg”Lev–
+::
+ERR_
+, 
+__FILE__
+, 
+__func__
+, 
+__LINE__
+).
+	`g‘SŒ—m
+()
+
+	)
+
+144 
+	}
+}
+
+	@
+1
+.
+0
+9
+113
+Channel.cpp
+Channel.h
+EPoller.cpp
+EPoller.h
+EventLoop.h
+ExpectClient.cpp
+ExpectServer.cpp
+LockService.h
+Logger.h
