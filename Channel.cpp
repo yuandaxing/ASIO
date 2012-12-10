@@ -97,7 +97,6 @@ void Channel::doProcess()
 	whyWakeup_ = 0;
 }
 
-
 bool Channel::regEventLoop(EventLoop *el, EventType e) {
 	return el->regChannel(fd_, this, e);
 }
