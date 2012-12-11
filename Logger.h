@@ -129,13 +129,6 @@ class Logger{
 		static const char *levelName[]; 
 };
 
-Mutex Logger::m;
-bool Logger::initFlag = false;
-const char * Logger::LoggerName = NULL;
-Logger::LoggerLevel Logger::level = INFO_;
-FILE *Logger::fp = stdout;
-const char * Logger::levelName[] = {"TRACE", "DEBUG", "INFO",
-											"WARN", "ERR"};
 #define TRACE 	threadSafe::Logger(Logger::LoggerLevel::TRACE_, __FILE__, __func__, __LINE__).getStream()
 #define DEBUG 	threadSafe::Logger(Logger::LoggerLevel::DEBUG_, __FILE__, __func__, __LINE__).getStream()
 #define INFO 	threadSafe::Logger(Logger::LoggerLevel::INFO_, __FILE__, __func__, __LINE__).getStream()

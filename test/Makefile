@@ -7,7 +7,7 @@ AR      =ar
 
 CFLAGS =  -g -Wall -pedantic -std=c++0x
 LDFLAGS = -std=c++0x
-SRCS 	=  Channel.cpp EPoller.cpp EventLoop.cpp Socket.cpp Logger.cpp
+SRCS 	=  ../Channel.cpp ../EPoller.cpp ../EventLoop.cpp ../Socket.cpp ../Logger.cpp
 #SRCS =  Palindrome.cpp longestCommonSubstring.cpp \
 #		LongestPalindromicSubstring.cpp regularExpression.cpp \
 #		cycleSortedList.cpp reverseBit.cpp lowestCommonAncestorBT.cpp \
@@ -25,21 +25,17 @@ SRCS 	=  Channel.cpp EPoller.cpp EventLoop.cpp Socket.cpp Logger.cpp
 #		arraycut.cpp numBytes.cpp chess.cpp RainTrap.cpp \
 #		pow.cpp MatrixFindZero.cpp 2DRainWater.cpp
 OBJS := $(SRCS:.cpp=.o)
-EXE1 := SimplePingPong.exe 
-EXE2 := SimplePingPong-client.exe
+EXE1 := testSocket.exe 
+EXE2 := testSocket-client.exe 
 
-all:$(OBJS) $(EXE1)  $(EXE2)
+all:$(EXE1)  $(EXE2)
 
 $(EXE1):$(OBJS) 
-	$(CC) -g -o  $@ SimplePingPong.cpp $(OBJS) $(LDFLAGS)
+	$(CC) -g -o  $@ testSocket.cpp  $(OBJS) $(LDFLAGS)
 
 $(EXE2):$(OBJS) 
-	$(CC) -g -o $@ SimplePingPong-client.cpp $(OBJS) $(LDFLAGS)
+	$(CC) -g -o $@ testSocket-client.cpp $(OBJS) $(LDFLAGS)
 
-$(OBJS):%.o:%.cpp	
-	$(CC) -g -c -o $@  $< $(CFLAGS)
-.SUFFIXES:
-.SUFFIXES: .c .o
 
 .PHONY:clean
 clean: 
