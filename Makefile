@@ -25,21 +25,20 @@ SRCS 	=  Channel.cpp EPoller.cpp EventLoop.cpp Socket.cpp Logger.cpp
 #		arraycut.cpp numBytes.cpp chess.cpp RainTrap.cpp \
 #		pow.cpp MatrixFindZero.cpp 2DRainWater.cpp
 OBJS := $(SRCS:.cpp=.o)
+SUBDIR := test
+all:$(OBJS) $(SUBDIR)
 
-all:$(OBJS) $(EXE1)  $(EXE2)
 
-$(EXE1):$(OBJS) 
-	$(CC) -g -o  $@ SimplePingPong.cpp $(OBJS) $(LDFLAGS)
-
-$(EXE2):$(OBJS) 
-	$(CC) -g -o $@ SimplePingPong-client.cpp $(OBJS) $(LDFLAGS)
+$(SUBDIR):$(OBJS)
+	make -C $@
 
 $(OBJS):%.o:%.cpp	
 	$(CC) -g -c -o $@  $< $(CFLAGS)
+
 .SUFFIXES:
 .SUFFIXES: .c .o
 
 .PHONY:clean
 clean: 
 	$(RM) *.o 
-	$(RM) ${OBJS} ${EXE1} $(EXE2)
+	$(RM) ${OBJS} $(SUBDIR)/*.exe
