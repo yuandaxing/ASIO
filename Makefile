@@ -25,8 +25,6 @@ SRCS 	=  Channel.cpp EPoller.cpp EventLoop.cpp Socket.cpp Logger.cpp
 #		arraycut.cpp numBytes.cpp chess.cpp RainTrap.cpp \
 #		pow.cpp MatrixFindZero.cpp 2DRainWater.cpp
 OBJS := $(SRCS:.cpp=.o)
-EXE1 := SimplePingPong.exe 
-EXE2 := SimplePingPong-client.exe
 
 all:$(OBJS) $(EXE1)  $(EXE2)
 

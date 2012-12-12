@@ -25,19 +25,16 @@ SRCS 	=  ../Channel.cpp ../EPoller.cpp ../EventLoop.cpp ../Socket.cpp ../Logger.
 #		arraycut.cpp numBytes.cpp chess.cpp RainTrap.cpp \
 #		pow.cpp MatrixFindZero.cpp 2DRainWater.cpp
 OBJS := $(SRCS:.cpp=.o)
-EXE1 := testSocket.exe 
-EXE2 := testSocket-client.exe 
+SRCSEXE := testSocket-client.cpp testSocket.cpp SimplePingPong-client.cpp SimplePingPong.cpp
+EXES := $(SRCSEXE:.cpp=.exe)
 
-all:$(EXE1)  $(EXE2)
+all:$(EXES) 
 
-$(EXE1):$(OBJS) 
-	$(CC) -g -o  $@ testSocket.cpp  $(OBJS) $(LDFLAGS)
+$(EXES):%.exe:%.cpp
+	$(CC) -g -o  $@ $< $(OBJS) $(LDFLAGS)
 
-$(EXE2):$(OBJS) 
-	$(CC) -g -o $@ testSocket-client.cpp $(OBJS) $(LDFLAGS)
 
 
 .PHONY:clean
 clean: 
-	$(RM) *.o 
-	$(RM) ${OBJS} ${EXE1} $(EXE2)
+	$(RM) $(EXES) 
