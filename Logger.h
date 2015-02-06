@@ -1,26 +1,7 @@
-/*
- * =====================================================================================
- *
- *       Filename:  Logger.h
- *
- *    Description:  first we need to init Logger, the Logger filename, the 
- *    Logger level, then we can just use it like, DEBUG << "test", INFO << "Test"
- *    I use fprintf function to ensure thread safe, and others use write raw fucntion.
- *
- *        Version:  1.0
- *        Created:  2012年05月21日 07时32分20秒
- *       Revision:  none
- *       Compiler:  gcc
- *
- *         Author:  Yuan DaXing (http://goo.gl/VpwzO), mryuan0@gmail.com
- *   Organization:  
- *
- * =====================================================================================
- */
 #ifndef  _LOGGER_H__INC
 #define  _LOGGER_H__INC
 
-#include "LockService.h"
+#include <LockService.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>

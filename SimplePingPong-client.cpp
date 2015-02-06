@@ -1,28 +1,12 @@
-/*
- * =====================================================================================
- *
- *       Filename:  SimplePingPong-client.cpp
- *
- *    Description:  
- *
- *        Version:  1.0
- *        Created:  2012年12月09日 10时02分06秒
- *       Revision:  none
- *       Compiler:  gcc
- *
- *         Author:  Yuan DaXing (http://goo.gl/VpwzO), mryuan0@gmail.com
- *   Organization:  
- *
- * =====================================================================================
- */
 #include <string>
 #include <vector>
-#include "Channel.h"
+#include <Channel.h>
 #include <netinet/in.h>
 #include <sys/socket.h>
 #include <arpa/inet.h>
 #include <iostream>
 #include <string.h>
+#include <unistd.h>
 class SimpleClient {
 	public:
 		SimpleClient(const std::string &addr, int port) {
@@ -45,11 +29,9 @@ class SimpleClient {
 				pos += ch_.read(&vc[pos], vc.size() - pos);
 			}
 		}
-
 	private:
 		Channel ch_;
 };
-
 
 int main() {
 	SimpleClient sc("127.0.0.1", 8000);

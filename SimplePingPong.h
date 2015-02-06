@@ -1,24 +1,7 @@
-/*
- * =====================================================================================
- *
- *       Filename:  SimplePingPong.h
- *
- *    Description:  pingpingServer.h
- *
- *        Version:  1.0
- *        Created:  2012年12月08日 14时57分12秒
- *       Revision:  none
- *       Compiler:  gcc
- *
- *         Author:  Yuan DaXing (http://goo.gl/VpwzO), mryuan0@gmail.com
- *   Organization:  
- *
- * =====================================================================================
- */
 #include <string>
 #include <vector>
-#include "Channel.h"
-#include "EventLoop.h"
+#include <Channel.h>
+#include <EventLoop.h>
 #include <algorithm>
 #include <iostream>
 class PingPongClient {

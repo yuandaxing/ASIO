@@ -1,24 +1,5 @@
-/*
- * =====================================================================================
- *
- *       Filename:  LockService.h
- *
- *    Description:  this contains LockGuard and Condition signal, please do not derived the class, and I assume the pthread work well
- *
- *        Version:  1.0
- *        Created:  2012年05月16日 15时41分28秒
- *       Revision:  none
- *       Compiler:  gcc
- *
- *         Author:  yuan DaXing (http://goo.gl/VpwzO), mryuan0@gmail.com
- *   Organization:  
- *
- * =====================================================================================
- */
-
 #ifndef  _LOCKSERVICE_H_INC
 #define  _LOCKSERVICE_H_INC
-
 #include <pthread.h>
 #include <time.h>
 #include <boost/utility.hpp>

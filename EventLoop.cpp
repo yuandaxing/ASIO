@@ -1,22 +1,4 @@
-/*
- * =====================================================================================
- *
- *       Filename:  EventLoop.c
- *
- *    Description: implement eventloop 
- *
- *        Version:  1.0
- *        Created:  2012年12月07日 22时06分34秒
- *       Revision:  none
- *       Compiler:  gcc
- *
- *         Author:  Yuan DaXing (http://goo.gl/VpwzO), mryuan0@gmail.com
- *   Organization:  
- *
- * =====================================================================================
- */
-
-#include "EventLoop.h"
+#include <EventLoop.h>
 
 EventLoop::EventLoop () : run_(true) { }
 EventLoop::~EventLoop() { }

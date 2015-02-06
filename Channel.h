@@ -1,24 +1,7 @@
-/*
- * =====================================================================================
- *
- *       Filename:  Channel.h
- *
- *    Description:  
- *
- *        Version:  1.0
- *        Created:  2012年09月20日 17时32分40秒
- *       Revision:  none
- *       Compiler:  gcc
- *
- *         Author:  Yuan DaXing (http://goo.gl/VpwzO), mryuan0@gmail.com
- *   Organization:  
- *
- * =====================================================================================
- */
-
 /* 
  * currently Channel do not support timeout
  * */
+
 #ifndef  MESSAGER_CHANNEL_H__INC
 #define  MESSAGER_CHANNEL_H__INC
 #include <string>

@@ -1,23 +1,5 @@
-/*
- * =====================================================================================
- *
- *       Filename:  Channel.cpp
- *
- *    Description:  implement
- *
- *        Version:  1.0
- *        Created:  2012年09月21日 19时17分31秒
- *       Revision:  none
- *       Compiler:  gcc
- *
- *         Author:  Yuan DaXing (http://goo.gl/VpwzO), mryuan0@gmail.com
- *   Organization:  
- *
- * =====================================================================================
- */
-
-#include "Channel.h"
-#include "EventLoop.h"
+#include <Channel.h>
+#include <EventLoop.h>
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <unistd.h>
@@ -33,6 +15,7 @@ Channel::Channel():fd_(-1), event_(0), whyWakeup_(0),
 
 Channel::Channel(int fd) : fd_(fd), event_(0), whyWakeup_(0),
 	state_(kNew), Valid_(true) { }
+
 Channel::~Channel( ) {
 	close();
 }
@@ -62,6 +45,7 @@ int Channel::write(const char *buf, int size) {
 bool Channel::connect(const struct sockaddr_in &sock) {
 	return ::connect(fd_, (sockaddr*)&sock, sizeof(sock)) == 0 ;
 }
+
 bool Channel::listen(int qsize) {
 	return ::listen(fd_, qsize) == 0;
 }

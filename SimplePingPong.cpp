@@ -1,22 +1,4 @@
-/*
- * =====================================================================================
- *
- *       Filename:  SimplePingPong.c
- *
- *    Description:  
- *
- *        Version:  1.0
- *        Created:  2012年12月08日 19时04分44秒
- *       Revision:  none
- *       Compiler:  gcc
- *
- *         Author:  Yuan DaXing (http://goo.gl/VpwzO), mryuan0@gmail.com
- *   Organization:  
- *
- * =====================================================================================
- */
-
-#include "SimplePingPong.h"
+#include <SimplePingPong.h>
 #include <netinet/in.h>
 #include <sys/socket.h>
 #include <arpa/inet.h>
@@ -24,6 +6,7 @@
 #include <unistd.h>
 #include <assert.h>
 #include <fcntl.h>
+
 void PingPongServer::ListeningHandler(Channel *ch) {
 	Channel *c = ch->accept();
 	c->setOption(Channel::Options::kNoBlocking);

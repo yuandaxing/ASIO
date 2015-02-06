@@ -1,30 +1,14 @@
-/*
- * =====================================================================================
- *
- *       Filename:  EPoller.cpp
- *
- *    Description:  
- *
- *        Version:  1.0
- *        Created:  2012年09月20日 22时13分17秒
- *       Revision:  none
- *       Compiler:  gcc
- *
- *         Author:  Yuan DaXing (http://goo.gl/VpwzO), mryuan0@gmail.com
- *   Organization:  
- *
- * =====================================================================================
- */
-#include <unistd.h>
+#include <EPoller.h>
+#include <Logger.h>
 #include <fcntl.h>
-#include "EPoller.h"
 #include <sys/epoll.h>
-#include "Logger.h"
+#include <unistd.h>
 /* 
  * for epoll we use level trigger please see man 7 epoll to see why
  * we just use poll add del interface
  * current, it do not consider portable
  * */
+
 using namespace threadSafe;
 EPoller::EPoller(int nfd) : epfd_(::epoll_create1(0)), 
 	eventList_(kNFd) { 
